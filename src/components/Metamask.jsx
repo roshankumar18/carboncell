@@ -31,9 +31,14 @@ const Metamask = () => {
                 toast.success('Successfully connected')
             }catch(error){
               setConnectedAccount(false)
+              if(error.code===4001){
+                toast.error('Extension Closed')
+              }else{
                 toast.error('Login in process. Please wait')
+              }
+               
             }
-          // instantiate Web3 with the injected provider
+         
 
         } else {
           toast.error('Please download metamask to connect')
