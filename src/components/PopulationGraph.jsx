@@ -79,9 +79,12 @@ const PopulationGraph = () => {
 
   return (
     <div className='flex flex-col flex-1 gap-2 overflow-y-auto mt-12'>
-      <div className='text-4xl font-semibold'>Graph</div>
-     <div className='rounded-md  flex flex-col  h-96'>
-      {isloading?(<LoaderCircle className='animate-spin'/>):(<Line data={chartData} options={chartOptions} className='w-full ' />)}
+      <div className='p-4'>
+        <div className='text-4xl font-semibold'>Graph</div>
+        <div className='rounded-md  flex flex-col  h-96'>
+        {isloading?(<LoaderCircle className='animate-spin'/>):(<Line data={chartData} options={chartOptions} className='w-full ' />)}
+      </div>
+
         
     </div>
     </div>

@@ -26,8 +26,9 @@ const PriceCard = () => {
   return (
    
    
-    <div className='flex flex-col flex-1 gap-2  overflow-auto pt-12 '>     
-        <div className='text-4xl font-semibold'>Bitcoin Prices</div>
+    <div className='flex flex-col flex-1 gap-2  overflow-auto pt-12 '>   
+      <div className='p-4'>
+      <div className='text-4xl font-semibold'>Bitcoin Prices</div>
         {!!priceData || isloading? ( priceData && (
         
         <div className='text-black flex gap-2'>
@@ -42,6 +43,8 @@ const PriceCard = () => {
         ))}
         </div>
       )):(<LoaderCircle className='animate-spin'/>)}
+      </div>  
+
 
     </div>
   )
